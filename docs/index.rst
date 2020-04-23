@@ -24,12 +24,3 @@ We will be following the CWL tutorial using virtual machines provided by EBI.  B
    :caption: Using VS Code:
 
    connecting_via_vscode.rst
-
-
-   
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

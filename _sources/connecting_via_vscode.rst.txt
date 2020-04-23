@@ -6,7 +6,11 @@ Connecting via VS Code
 Installing SSH extension
 ========================
 
-Open **Visual Studio Code**, and press `Ctrl` + `Shift` + `X` to open the extensions panel.  In the search box on the left hand side, type `Remote SSH`.  This should find lots of extensions, the top one should be **Remote - SSH** and under this it should say **Microsoft**.  Click on it and then click install. It may ask you to restart **Visual Studio Code**
+1. Open **Visual Studio Code**
+2. Press `Ctrl` + `Shift` + `X` to open the extensions panel.
+3. In the search box on the left hand side, type `Remote SSH`.
+4. This should find lots of extensions, the top one should be **Remote - SSH** and under this it should say **Microsoft**.
+5. Click on the extension, and then click **install**. It may ask you to restart **Visual Studio Code**
 
 Installing an SSH client on Windows 10
 --------------------------------------

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; cwl-virtual-training 0.1 documentation</title>
+  <title>Accessing the VM &mdash; cwl-virtual-training 0.1 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Wait for the training" href="congratulations.html" />
+    <link rel="prev" title="Building the VM" href="build_vm.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -62,7 +63,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -79,17 +80,17 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting a VM:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="elixir_account.html">Getting an Elixir Account</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="elixir_account.html">Getting an Exlixir Account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="request_membership.html">Team Membership</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build_vm.html">Building the VM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="accessing_vm.html">Accessing the VM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Accessing the VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#validate-the-vm-works">Validate the VM works</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="congratulations.html">Wait for the training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requesting_vm.html">Requesting a VM</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Using VS Code:</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="connecting_via_vscode.html">Connecting via VS Code</a></li>
 </ul>
 
@@ -136,12 +137,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li></li>
+      <li>Accessing the VM</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/accessing_vm.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -153,24 +156,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="accessing-the-vm">
+<h1>Accessing the VM<a class="headerlink" href="#accessing-the-vm" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">In the portal in the details of your Deployment locate the Outputs section (see the last screenshot in previous section). You should find there ssh_command with a value similar to ssh <a class="reference external" href="mailto:ubuntu&#37;&#52;&#48;45&#46;86&#46;170&#46;4">ubuntu<span>&#64;</span>45<span>&#46;</span>86<span>&#46;</span>170<span>&#46;</span>4</a> (IP might be different).</p>
+</li>
+<li><p class="first">Run that command from your Terminal (or Git Bash in Windows). If you have secured your key with a passphrase, you will be asked for it. Please, provide it.</p>
+<a class="reference internal image-reference" href="_images/image9.png"><img alt="_images/image9.png" src="_images/image9.png" style="width: 600px;" /></a>
+</li>
+<li><p class="first">If you managed to log in to the VM successfully, you will see sth like that:</p>
+<a class="reference internal image-reference" href="_images/image7.png"><img alt="_images/image7.png" src="_images/image7.png" style="width: 600px;" /></a>
+</li>
+</ol>
+<div class="section" id="validate-the-vm-works">
+<h2>Validate the VM works<a class="headerlink" href="#validate-the-vm-works" title="Permalink to this headline">¶</a></h2>
+<p>Now you will only check, if CWL is properly installed in the VM.</p>
+<ol class="arabic">
+<li><p class="first">In the terminal of you VM type: cd workflow</p>
+</li>
+<li><p class="first">And then run the test workflow using cwltool, by running a command: <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">hashsplitter-workflow.cwl</span> <span class="pre">--input</span> <span class="pre">resources/test.txt</span></code></p>
+</li>
+<li><p class="first">You should see something like this:</p>
+<a class="reference internal image-reference" href="_images/image13.png"><img alt="_images/image13.png" src="_images/image13.png" style="width: 600px;" /></a>
+</li>
+<li><p class="first">Disconnect from the VM by hitting <code class="docutils literal notranslate"><span class="pre">CTRL-D</span></code></p>
+</li>
+</ol>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="congratulations.html" class="btn btn-neutral float-right" title="Wait for the training" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="build_vm.html" class="btn btn-neutral float-left" title="Building the VM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -203,14 +231,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

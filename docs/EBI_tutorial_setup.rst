@@ -83,16 +83,18 @@ Using SSH Keys is a more secure and more convienient authentication method than 
 
 To create an SSH Key pair, open up a terminal and type the keygen command:
 
-```bash
+. code-block:: bash
+
 ssh-keygen -t rsa
-```
 
 This will bring up a prompt asking you where to save the public-private key pair.
 
-```bash
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/<user_name>/.ssh/id_rsa): 
-```
+. code-block:: bash
+
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/home/<user_name>/.ssh/id_rsa): 
+
+
 Note, the file will have a different path in Windows and MacOS
 
 You can just press _Enter_ here to save them in the default file.  You will then be prompted for a passphrase (a password) for this file.  It is highly encouraged to use a passphrase, not doing so is insecure.
@@ -103,42 +105,46 @@ Enter passphrase (empty for no passphrase):
 
 This will then print out some information like below.
 
-```bash
-Your identification has been saved in /home/<username>/.ssh/id_rsa.
-Your public key has been saved in /home/<username>/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:/TMLeYQjjr0UhxJqJOfbr5gYbvszACQHaLn31nQbm2E <username>@<machine_name>
-The key's randomart image is:
-+---[RSA 3072]----+
-|o..              |
-|o+.              |
-|+.o o .          |
-|.. * . o E .     |
-| .. = + S @ .    |
-|  .. = * B =     |
-|  ..o o + o =    |
-| ..ooo o . o +   |
-| .+o+o..o   .    |
-+----[SHA256]-----+
-```
+. code-block:: bash
+
+  Your identification has been saved in /home/<username>/.ssh/id_rsa.
+  Your public key has been saved in /home/<username>/.ssh/id_rsa.pub.
+  The key fingerprint is:
+  SHA256:/TMLeYQjjr0UhxJqJOfbr5gYbvszACQHaLn31nQbm2E <username>@<machine_name>
+  The key's randomart image is:
+  +---[RSA 3072]----+
+  |o..              |
+  |o+.              |
+  |+.o o .          |
+  |.. * . o E .     |
+  | .. = + S @ .    |
+  |  .. = * B =     |
+  |  ..o o + o =    |
+  | ..ooo o . o +   |
+  | .+o+o..o   .    |
+  +----[SHA256]-----+
+
 
 The part of this pair that you will need for creating the virtual machine is the public key. Unless you changed the default location, you can view it by typing:
 
-```bash
-cat /home/<username>/.ssh/id_rsa.pub
-```
+. code-block:: bash
+
+  cat /home/<username>/.ssh/id_rsa.pub
 
 and in windows
 
-```bash
-type C:\Users\<Name>\.ssh\id_rsa.pub
-```
+. code-block:: bash
 
-# Setting up SSH on Visual Studio Code
+  type C:\Users\<Name>\.ssh\id_rsa.pub
+
+====================================
+Setting up SSH on Visual Studio Code
+====================================
 
 Open **Visual Studio Code**, and press `Ctrl` + `Shift` + `X` to open the extensions panel.  In the search box on the left hand side, type `Remote SSH`.  This should find lots of extensions, the top one should be **Remote - SSH** and under this it should say **Microsoft**.  Click on it and then click install. It may ask you to restart **Visual Studio Code**
 
-
-# Installing an SSH client on Windows 10.
+======================================
+Installing an SSH client on Windows 10
+======================================
 
 https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/

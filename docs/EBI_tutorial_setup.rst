@@ -54,7 +54,7 @@ Open visual studio code, and press the **`F1`** key to access the command palett
 
 Once you have clicked on this, click on `**Add New SSH Host...*`, and then type
 
-. code-block:: bash
+.. code-block:: bash
 
   ssh ubuntu@<my_vms_ip>
 
@@ -83,13 +83,13 @@ Using SSH Keys is a more secure and more convienient authentication method than 
 
 To create an SSH Key pair, open up a terminal and type the keygen command:
 
-. code-block:: bash
+.. code-block:: bash
 
-ssh-keygen -t rsa
+  ssh-keygen -t rsa
 
 This will bring up a prompt asking you where to save the public-private key pair.
 
-. code-block:: bash
+.. code-block:: bash
 
   Generating public/private rsa key pair.
   Enter file in which to save the key (/home/<user_name>/.ssh/id_rsa): 
@@ -99,14 +99,15 @@ Note, the file will have a different path in Windows and MacOS
 
 You can just press _Enter_ here to save them in the default file.  You will then be prompted for a passphrase (a password) for this file.  It is highly encouraged to use a passphrase, not doing so is insecure.
 
-```bash
-Enter passphrase (empty for no passphrase): 
-```
+.. code-block:: bash
+
+  Enter passphrase (empty for no passphrase): 
+
 
 This will then print out some information like below.
 
-. code-block:: bash
-
+.. code-block:: none
+  
   Your identification has been saved in /home/<username>/.ssh/id_rsa.
   Your public key has been saved in /home/<username>/.ssh/id_rsa.pub.
   The key fingerprint is:
@@ -127,13 +128,13 @@ This will then print out some information like below.
 
 The part of this pair that you will need for creating the virtual machine is the public key. Unless you changed the default location, you can view it by typing:
 
-. code-block:: bash
+.. code-block:: bash
 
   cat /home/<username>/.ssh/id_rsa.pub
 
 and in windows
 
-. code-block:: bash
+.. code-block:: bash
 
   type C:\Users\<Name>\.ssh\id_rsa.pub
 

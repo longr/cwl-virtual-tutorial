@@ -10,7 +10,8 @@ Welcome to cwl-virtual-training's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   requesting_vm
+   connecting_via_vscode
 
 Indices and tables
 ==================

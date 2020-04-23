@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CWL VM via EBI Cloud Portal &mdash; cwl-virtual-training 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to cwl-virtual-training’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> cwl-virtual-training
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CWL VM via EBI Cloud Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-get-a-vm-with-cwltool-in-ebi-openstack">How to get a VM with cwltool in EBI (OpenStack)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#connecting-to-the-virtual-machine-vm">Connecting to the Virtual Machine (VM)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-ssh-in-a-terminal">Using SSH in a terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#using-visual-studio-code">Using Visual Studio Code.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-an-ssh-connection">Setting up an SSH Connection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connecting-to-an-existing-ssh-connection">Connecting to an existing SSH connection</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#generating-ssh-keys">Generating SSH Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#setting-up-ssh-on-visual-studio-code">Setting up SSH on Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-an-ssh-client-on-windows-10">Installing an SSH client on Windows 10</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cwl-virtual-training</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CWL VM via EBI Cloud Portal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/EBI_tutorial_setup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cwl-vm-via-ebi-cloud-portal">
+<h1>CWL VM via EBI Cloud Portal<a class="headerlink" href="#cwl-vm-via-ebi-cloud-portal" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-to-get-a-vm-with-cwltool-in-ebi-openstack">
+<h2>How to get a VM with cwltool in EBI (OpenStack)<a class="headerlink" href="#how-to-get-a-vm-with-cwltool-in-ebi-openstack" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Open [<a class="reference external" href="https://cloud-portal.ebi.ac.uk/](https://cloud-portal.ebi.ac.uk/">https://cloud-portal.ebi.ac.uk/](https://cloud-portal.ebi.ac.uk/</a>) in the browser (Chrome usually works).</li>
+<li>Click <strong>Sign On</strong> in the upper right corner. On the page Access the EBI Cloud Portal (with Robby the Robot) click <strong>elixir SSO</strong></li>
+<li>Log in using your Elixir account.</li>
+<li>After successful login you should land on the page <strong>Repository</strong>. You can always come back to it by choosing <strong>Application Repository</strong> from the menu (which looks like three stacked horizontal lines) in the upper left corner.</li>
+<li>You should see a tile named <strong>CWL VM environment (SHARED)</strong>. If not, then your account needs to be added to the BioExcel Embassy team. If you cannot locate CWL VM environment, contact me (<a class="reference external" href="mailto:aniewielska&#37;&#52;&#48;ebi&#46;ac&#46;uk">aniewielska<span>&#64;</span>ebi<span>&#46;</span>ac<span>&#46;</span>uk</a>)</li>
+<li>Click <strong>‘CWL VM environment shared’</strong>, which will take you to the deployment wizard page.</li>
+</ol>
+<p>7. Click on <strong>Select configuration</strong> and select <strong>CWL BioExcel | &#64;(Embassy ext05 BioExcel) OSTACK</strong> from the drop down list.  If this option is not available, contact ania.
+.. Ignore the error next to deployment parameters (some parameters remain unassigned).
+8. Click <strong>Next</strong>.
+9. Paste your public SSH key in the text field labelled <strong>SSH key</strong>.</p>
+<p>See section SSH Keys if you don’ have one.</p>
+<ol class="arabic simple" start="10">
+<li>Click <strong>Next</strong>.</li>
+<li>You do not need to enter anything in the fields in this page, so just click <strong>Next</strong>.</li>
+<li>Click <strong>DEPLOY</strong>.</li>
+<li>A pop-up box should appear asking you to confirm the deployment.  Click <strong>DEPLOY</strong>.</li>
+</ol>
+<p>The deployment process will start. It takes approximatly 10 minutes. There may be an error, but this should be fine. Once it has finished deployment, you will see some text under the heading <strong>ssh_command</strong>.  You can use this to ssh into the machine. Note, that there needs to be a space between ssh and ubuntu, which is missing here.  The ssh command should be of the form <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">ubuntu&#64;11.11.111.11</span></code> where the last string of numbers is the IP address of the virtual machine created for you.</p>
+</div>
+</div>
+<div class="section" id="connecting-to-the-virtual-machine-vm">
+<h1>Connecting to the Virtual Machine (VM)<a class="headerlink" href="#connecting-to-the-virtual-machine-vm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-ssh-in-a-terminal">
+<h2>Using SSH in a terminal<a class="headerlink" href="#using-ssh-in-a-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Open a terminal (In windows, press the windows key and type <cite>powershell</cite> and the press <cite>enter</cite>) and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ubuntu@&lt;my_vms_ip&gt;
+</pre></div>
+</div>
+<p>replacing <cite>&lt;my_vms_ip&gt;</cite> with the IP address of your VM.  If you setup the publickey with a passphrase it should prompt you for the passphrase.  You will be prompted for the pass phrase usually once every 24 hours, or after a reboot, which ever occurs first.</p>
+</div>
+</div>
+<div class="section" id="using-visual-studio-code">
+<h1>Using Visual Studio Code.<a class="headerlink" href="#using-visual-studio-code" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setting-up-an-ssh-connection">
+<h2>Setting up an SSH Connection<a class="headerlink" href="#setting-up-an-ssh-connection" title="Permalink to this headline">¶</a></h2>
+<p>Open visual studio code, and press the <strong>`F1`</strong> key to access the command palette.  Then click on <strong>Remote-SSH: Connect to Host…</strong>.  If you begin typing this, it should appear in the list.</p>
+<p>Once you have clicked on this, click on <cite>**Add New SSH Host…*</cite>, and then type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ubuntu@&lt;my_vms_ip&gt;
+</pre></div>
+</div>
+<p>You may be prompted to <strong>Select SSH configuration file to update</strong>.  If you are select <code class="docutils literal notranslate"><span class="pre">C:Users\&lt;Name&gt;\.ssh\config</span></code></p>
+<p>A pop up box should then appear in the bottom right with an option to <strong>Connect</strong>.  Click on <strong>Connect</strong>.  If the box does not appear follow the instructions for connecting to an existing SSH connection below.</p>
+<div class="section" id="connecting-to-an-existing-ssh-connection">
+<h3>Connecting to an existing SSH connection<a class="headerlink" href="#connecting-to-an-existing-ssh-connection" title="Permalink to this headline">¶</a></h3>
+<p>To connect to this, press the <strong>`F1`</strong> key to access the command palette.  Then click on <strong>Remote-SSH: Connect to Host…</strong>.  You should then see the IP address of the machine you want to connect to in the list, click on it.</p>
+<p>This should open up a new window.  On <strong>Windows</strong> this should have a prompt at the top for you to enter your SSH passphrase. On Linux, your system should prompt for the passphrase.</p>
+<p>Once it has connected, this window of Visual Studio Code will have access to all the files on the remote machine.</p>
+<p>You will probably want access to the <strong>terminal</strong> for the tutorial.  To do this, click on <strong>Terminal</strong> at the top, and then click on <strong>New Terminal</strong>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="generating-ssh-keys">
+<h1>Generating SSH Keys<a class="headerlink" href="#generating-ssh-keys" title="Permalink to this headline">¶</a></h1>
+<p>Using SSH Keys is a more secure and more convienient authentication method than passwords.  This uses a pair of keys; a public key that you can give to someone, or put on a machine you want to access, and a private key that you keep to yourself and never give to anyone.</p>
+<p>To create an SSH Key pair, open up a terminal and type the keygen command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa
+</pre></div>
+</div>
+<p>This will bring up a prompt asking you where to save the public-private key pair.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Generating public/private rsa key pair.
+Enter file in which to save the key <span class="o">(</span>/home/&lt;user_name&gt;/.ssh/id_rsa<span class="o">)</span>:
+</pre></div>
+</div>
+<p>Note, the file will have a different path in Windows and MacOS</p>
+<p>You can just press _Enter_ here to save them in the default file.  You will then be prompted for a passphrase (a password) for this file.  It is highly encouraged to use a passphrase, not doing so is insecure.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+</pre></div>
+</div>
+<p>This will then print out some information like below.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /home/&lt;username&gt;/.ssh/id_rsa.
+Your public key has been saved in /home/&lt;username&gt;/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:/TMLeYQjjr0UhxJqJOfbr5gYbvszACQHaLn31nQbm2E &lt;username&gt;@&lt;machine_name&gt;
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|o..              |
+|o+.              |
+|+.o o .          |
+|.. * . o E .     |
+| .. = + S @ .    |
+|  .. = * B =     |
+|  ..o o + o =    |
+| ..ooo o . o +   |
+| .+o+o..o   .    |
++----[SHA256]-----+
+</pre></div>
+</div>
+<p>The part of this pair that you will need for creating the virtual machine is the public key. Unless you changed the default location, you can view it by typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /home/&lt;username&gt;/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<p>and in windows</p>
+<div class="highlight-psm1 notranslate"><div class="highlight"><pre><span></span><span class="nb">type </span><span class="s2">&quot;C:\Users\&lt;Name&gt;\.ssh\id_rsa.pub&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-up-ssh-on-visual-studio-code">
+<h1>Setting up SSH on Visual Studio Code<a class="headerlink" href="#setting-up-ssh-on-visual-studio-code" title="Permalink to this headline">¶</a></h1>
+<p>Open <strong>Visual Studio Code</strong>, and press <cite>Ctrl</cite> + <cite>Shift</cite> + <cite>X</cite> to open the extensions panel.  In the search box on the left hand side, type <cite>Remote SSH</cite>.  This should find lots of extensions, the top one should be <strong>Remote - SSH</strong> and under this it should say <strong>Microsoft</strong>.  Click on it and then click install. It may ask you to restart <strong>Visual Studio Code</strong></p>
+</div>
+<div class="section" id="installing-an-ssh-client-on-windows-10">
+<h1>Installing an SSH client on Windows 10<a class="headerlink" href="#installing-an-ssh-client-on-windows-10" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to cwl-virtual-training’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robin Long
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

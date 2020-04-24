@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -164,51 +164,47 @@
 <div class="section" id="installing-ssh-extension">
 <h2>Installing SSH extension<a class="headerlink" href="#installing-ssh-extension" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open <strong>Visual Studio Code</strong></li>
-<li>Press <cite>Ctrl</cite> + <cite>Shift</cite> + <cite>X</cite> to open the extensions panel.</li>
-<li>In the search box on the left hand side, type <cite>Remote SSH</cite>.</li>
-<li>This should find lots of extensions, the top one should be <strong>Remote - SSH</strong> and under this it should say <strong>Microsoft</strong>.</li>
-<li>Click on the extension, and then click <strong>install</strong>. It may ask you to restart <strong>Visual Studio Code</strong></li>
+<li><p>Open <strong>Visual Studio Code</strong></p></li>
+<li><p>Press <cite>Ctrl</cite> + <cite>Shift</cite> + <cite>X</cite> to open the extensions panel.</p></li>
+<li><p>In the search box on the left hand side, type <cite>Remote SSH</cite>.</p></li>
+<li><p>This should find lots of extensions, the top one should be <strong>Remote - SSH</strong> and under this it should say <strong>Microsoft</strong>.</p></li>
+<li><p>Click on the extension, and then click <strong>install</strong>. It may ask you to restart <strong>Visual Studio Code</strong></p></li>
 </ol>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">If you are using windows 10, you may not have an SSH client already.  You will need to install one so that you can connect to the VM.  There are great instructions for installing a client <a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">here</a>.</p>
+<p class="admonition-title">Warning</p>
+<p>If you are using windows 10, you may not have an SSH client already.  You will need to install one so that you can connect to the VM.  There are great instructions for installing a client <a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">here</a>.</p>
 </div>
 </div>
 <div class="section" id="configuring-the-ssh-connection">
 <h2>Configuring the SSH Connection<a class="headerlink" href="#configuring-the-ssh-connection" title="Permalink to this headline">¶</a></h2>
 <p>Now that the SSH extension has been installed, we will need to configure it to connect to our VM.</p>
 <ol class="arabic">
-<li><p class="first">Open visual studio code, and press the <strong>`F1`</strong> key to access the command palette.</p>
-</li>
-<li><p class="first">Click on <strong>Remote-SSH: Connect to Host…</strong>.  If you begin typing this, it should appear in the list.</p>
-</li>
-<li><p class="first">Once you have clicked on this, click on <cite>**Add New SSH Host…*</cite>, and then type</p>
+<li><p>Open visual studio code, and press the <strong>`F1`</strong> key to access the command palette.</p></li>
+<li><p>Click on <strong>Remote-SSH: Connect to Host…</strong>.  If you begin typing this, it should appear in the list.</p></li>
+<li><p>Once you have clicked on this, click on <cite>**Add New SSH Host…*</cite>, and then type</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ubuntu@&lt;my_vms_ip&gt;
 </pre></div>
 </div>
 </li>
-<li><p class="first">You may be prompted to <strong>Select SSH configuration file to update</strong>.  If so, select <code class="docutils literal notranslate"><span class="pre">C:Users\&lt;Name&gt;\.ssh\config</span></code></p>
-</li>
-<li><p class="first">A pop up box should then appear in the bottom right with an option to <strong>Connect</strong>.  Click on <strong>Connect</strong>.
-.. tip:: If the box does not appear follow the instructions for connecting to an existing SSH connection below.</p>
-</li>
+<li><p>You may be prompted to <strong>Select SSH configuration file to update</strong>.  If so, select <code class="docutils literal notranslate"><span class="pre">C:Users\&lt;Name&gt;\.ssh\config</span></code></p></li>
+<li><p>A pop up box should then appear in the bottom right with an option to <strong>Connect</strong>.  Click on <strong>Connect</strong>.
+.. tip:: If the box does not appear follow the instructions for connecting to an existing SSH connection below.</p></li>
 </ol>
 </div>
 <div class="section" id="connecting-via-ssh">
 <h2>Connecting via SSH<a class="headerlink" href="#connecting-via-ssh" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have configured the SSH connection we will need to connect to it, you may have to do this eveverytime you open VS Code</p>
 <ol class="arabic simple">
-<li>Open VS Code</li>
-<li>Press the <strong>`F1`</strong> key to access the command palette.</li>
-<li>Then click on <strong>Remote-SSH: Connect to Host…</strong>.  You should then see the IP address of the machine you want to connect to in the list, click on it.</li>
-<li>This should open up a new window.  On <strong>Windows</strong> this should have a prompt at the top for you to enter your SSH passphrase. On Linux, your system should prompt for the passphrase.</li>
-<li>Once it has connected, this window of Visual Studio Code will have access to all the files on the remote machine.</li>
+<li><p>Open VS Code</p></li>
+<li><p>Press the <strong>`F1`</strong> key to access the command palette.</p></li>
+<li><p>Then click on <strong>Remote-SSH: Connect to Host…</strong>.  You should then see the IP address of the machine you want to connect to in the list, click on it.</p></li>
+<li><p>This should open up a new window.  On <strong>Windows</strong> this should have a prompt at the top for you to enter your SSH passphrase. On Linux, your system should prompt for the passphrase.</p></li>
+<li><p>Once it has connected, this window of Visual Studio Code will have access to all the files on the remote machine.</p></li>
 </ol>
 <p>You will probably want access to the <strong>terminal</strong> for the tutorial.  To do this:</p>
 <ol class="arabic simple">
-<li>Click on <strong>Terminal</strong> at the top.</li>
-<li>Then click on <strong>New Terminal</strong>.</li>
+<li><p>Click on <strong>Terminal</strong> at the top.</p></li>
+<li><p>Then click on <strong>New Terminal</strong>.</p></li>
 </ol>
 </div>
 </div>

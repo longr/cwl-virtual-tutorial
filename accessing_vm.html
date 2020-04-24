@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -161,20 +161,15 @@
   <div class="section" id="accessing-the-vm">
 <h1>Accessing the VM<a class="headerlink" href="#accessing-the-vm" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
-<li><p class="first">Login to the bioexcel portal at <a class="reference external" href="https://bioexcel.ebi.ac.uk/">https://bioexcel.ebi.ac.uk/</a> if you have not already.</p>
-</li>
-<li><p class="first">Click on <strong>Deployments</strong> at the top.</p>
-</li>
-<li><p class="first">You should see a list of all your deployed VMs (Virtual Machines). Click on the button that begins <strong>CWL VM enviroment for</strong> (the last part will be a unique ID for the machine you deployed.</p>
-</li>
-<li><p class="first">Under <strong>outputs</strong> you should see a variable lablled <strong>external_ip</strong>, you will need this to log in to the VM.</p>
-</li>
-<li><p class="first">Below this is a variable labelled <strong>ssh_command</strong>, this is what you will need to type into a terminal or SSH client to access your VM, it should have a value similar to <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">ubuntu&#64;45.86.170.4</span></code>. The IP address (the numbers) might be different to this example, this is fine as they should be unique.</p>
-</li>
-<li><p class="first">Run that command from your Terminal (or Git Bash in Windows). If you have secured your key with a passphrase, you will be asked for it. Please, provide it.</p>
+<li><p>Login to the bioexcel portal at <a class="reference external" href="https://bioexcel.ebi.ac.uk/">https://bioexcel.ebi.ac.uk/</a> if you have not already.</p></li>
+<li><p>Click on <strong>Deployments</strong> at the top.</p></li>
+<li><p>You should see a list of all your deployed VMs (Virtual Machines). Click on the button that begins <strong>CWL VM enviroment for</strong> (the last part will be a unique ID for the machine you deployed.</p></li>
+<li><p>Under <strong>outputs</strong> you should see a variable lablled <strong>external_ip</strong>, you will need this to log in to the VM.</p></li>
+<li><p>Below this is a variable labelled <strong>ssh_command</strong>, this is what you will need to type into a terminal or SSH client to access your VM, it should have a value similar to <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">ubuntu&#64;45.86.170.4</span></code>. The IP address (the numbers) might be different to this example, this is fine as they should be unique.</p></li>
+<li><p>Run that command from your Terminal (or Git Bash in Windows). If you have secured your key with a passphrase, you will be asked for it. Please, provide it.</p>
 <a class="reference internal image-reference" href="_images/image9.png"><img alt="_images/image9.png" src="_images/image9.png" style="width: 600px;" /></a>
 </li>
-<li><p class="first">If you managed to log in to the VM successfully, you will see sth like that:</p>
+<li><p>If you managed to log in to the VM successfully, you will see sth like that:</p>
 <a class="reference internal image-reference" href="_images/image7.png"><img alt="_images/image7.png" src="_images/image7.png" style="width: 600px;" /></a>
 </li>
 </ol>
@@ -182,15 +177,12 @@
 <h2>Validate the VM works<a class="headerlink" href="#validate-the-vm-works" title="Permalink to this headline">¶</a></h2>
 <p>Now you will only check, if CWL is properly installed in the VM.</p>
 <ol class="arabic">
-<li><p class="first">In the terminal of you VM type: cd workflow</p>
-</li>
-<li><p class="first">And then run the test workflow using cwltool, by running a command: <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">hashsplitter-workflow.cwl</span> <span class="pre">--input</span> <span class="pre">resources/test.txt</span></code></p>
-</li>
-<li><p class="first">You should see something like this:</p>
+<li><p>In the terminal of you VM type: cd workflow</p></li>
+<li><p>And then run the test workflow using cwltool, by running a command: <code class="docutils literal notranslate"><span class="pre">cwltool</span> <span class="pre">hashsplitter-workflow.cwl</span> <span class="pre">--input</span> <span class="pre">resources/test.txt</span></code></p></li>
+<li><p>You should see something like this:</p>
 <a class="reference internal image-reference" href="_images/image13.png"><img alt="_images/image13.png" src="_images/image13.png" style="width: 600px;" /></a>
 </li>
-<li><p class="first">Disconnect from the VM by pressing <code class="docutils literal notranslate"><span class="pre">CTRL-D</span></code></p>
-</li>
+<li><p>Disconnect from the VM by pressing <code class="docutils literal notranslate"><span class="pre">CTRL-D</span></code></p></li>
 </ol>
 </div>
 </div>

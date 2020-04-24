@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Accessing the VM &mdash; cwl-virtual-training 0.1 documentation</title>
+  <title>Accessing the VM &mdash; CWL Virtual Training Setup 0.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Wait for the training" href="congratulations.html" />
+    <link rel="next" title="Congratulations" href="congratulations.html" />
     <link rel="prev" title="Building the VM" href="build_vm.html" /> 
 </head>
 
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> cwl-virtual-training
+            <a href="index.html" class="icon icon-home"> CWL Virtual Training Setup
           
 
           
@@ -89,8 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#validate-the-vm-works">Validate the VM works</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Wait for the training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requesting_vm.html">Requesting a VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Congratulations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using VS Code:</span></p>
 <ul>
@@ -109,7 +108,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">cwl-virtual-training</a>
+          <a href="index.html">CWL Virtual Training Setup</a>
         
       </nav>
 
@@ -162,7 +161,15 @@
   <div class="section" id="accessing-the-vm">
 <h1>Accessing the VM<a class="headerlink" href="#accessing-the-vm" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
-<li><p class="first">In the portal in the details of your Deployment locate the Outputs section (see the last screenshot in previous section). You should find there ssh_command with a value similar to ssh <a class="reference external" href="mailto:ubuntu&#37;&#52;&#48;45&#46;86&#46;170&#46;4">ubuntu<span>&#64;</span>45<span>&#46;</span>86<span>&#46;</span>170<span>&#46;</span>4</a> (IP might be different).</p>
+<li><p class="first">Login to the bioexcel portal at <a class="reference external" href="https://bioexcel.ebi.ac.uk/">https://bioexcel.ebi.ac.uk/</a> if you have not already.</p>
+</li>
+<li><p class="first">Click on <strong>Deployments</strong> at the top.</p>
+</li>
+<li><p class="first">You should see a list of all your deployed VMs (Virtual Machines). Click on the button that begins <strong>CWL VM enviroment for</strong> (the last part will be a unique ID for the machine you deployed.</p>
+</li>
+<li><p class="first">Under <strong>outputs</strong> you should see a variable lablled <strong>external_ip</strong>, you will need this to log in to the VM.</p>
+</li>
+<li><p class="first">Below this is a variable labelled <strong>ssh_command</strong>, this is what you will need to type into a terminal or SSH client to access your VM, it should have a value similar to <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">ubuntu&#64;45.86.170.4</span></code>. The IP address (the numbers) might be different to this example, this is fine as they should be unique.</p>
 </li>
 <li><p class="first">Run that command from your Terminal (or Git Bash in Windows). If you have secured your key with a passphrase, you will be asked for it. Please, provide it.</p>
 <a class="reference internal image-reference" href="_images/image9.png"><img alt="_images/image9.png" src="_images/image9.png" style="width: 600px;" /></a>
@@ -182,7 +189,7 @@
 <li><p class="first">You should see something like this:</p>
 <a class="reference internal image-reference" href="_images/image13.png"><img alt="_images/image13.png" src="_images/image13.png" style="width: 600px;" /></a>
 </li>
-<li><p class="first">Disconnect from the VM by hitting <code class="docutils literal notranslate"><span class="pre">CTRL-D</span></code></p>
+<li><p class="first">Disconnect from the VM by pressing <code class="docutils literal notranslate"><span class="pre">CTRL-D</span></code></p>
 </li>
 </ol>
 </div>
@@ -196,7 +203,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="congratulations.html" class="btn btn-neutral float-right" title="Wait for the training" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="congratulations.html" class="btn btn-neutral float-right" title="Congratulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="build_vm.html" class="btn btn-neutral float-left" title="Building the VM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -208,7 +215,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Robin Long
+        &copy; Copyright 2020, BioExcel
 
     </p>
   </div>

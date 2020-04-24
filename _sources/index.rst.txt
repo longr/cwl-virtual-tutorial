@@ -17,7 +17,6 @@ We will be following the CWL tutorial using virtual machines provided by EBI.  B
    build_vm.rst
    accessing_vm.rst
    congratulations.rst
-   requesting_vm.rst
 
 .. toctree::
    :maxdepth: 2

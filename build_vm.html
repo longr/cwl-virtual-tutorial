@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Building the VM &mdash; cwl-virtual-training 0.1 documentation</title>
+  <title>Building the VM &mdash; CWL Virtual Training Setup 0.1 documentation</title>
   
 
   
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> cwl-virtual-training
+            <a href="index.html" class="icon icon-home"> CWL Virtual Training Setup
           
 
           
@@ -85,13 +85,13 @@
 <li class="toctree-l1"><a class="reference internal" href="elixir_account.html">Getting an Elixir Account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="request_membership.html">Team Membership</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building the VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-an-ssh-key">Getting an SSH Key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-vm">Creating a VM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#verifying-the-vm">Verifying the VM</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="accessing_vm.html">Accessing the VM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Wait for the training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requesting_vm.html">Requesting a VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Congratulations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using VS Code:</span></p>
 <ul>
@@ -110,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">cwl-virtual-training</a>
+          <a href="index.html">CWL Virtual Training Setup</a>
         
       </nav>
 
@@ -163,6 +163,16 @@
   <div class="section" id="building-the-vm">
 <h1>Building the VM<a class="headerlink" href="#building-the-vm" title="Permalink to this headline">¶</a></h1>
 <p>Assuming you have followed the previous steps and checked that they worked, you should be ready to build the VM.</p>
+<div class="section" id="getting-an-ssh-key">
+<h2>Getting an SSH Key<a class="headerlink" href="#getting-an-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>You will need an SSH Key to log in into your newly built VM. Good instructions of how to generate an SSH Key are provided by <a class="reference external" href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Github</a>.</p>
+<p>You do not need to add the key to your GitHub account! It is enough that it is on your machine. In the next step you will provide your public key, while building a VM.</p>
+<p>If you are on Windows you may not have an SSH client installed. Try one of these options:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">Enable SSH client in Windows 10</a></li>
+<li><a class="reference external" href="https://gitforwindows.org/">Install Git for Windows (which includes SSH)</a></li>
+</ul>
+</div>
 <div class="section" id="creating-a-vm">
 <h2>Creating a VM<a class="headerlink" href="#creating-a-vm" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
@@ -217,7 +227,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Robin Long
+        &copy; Copyright 2020, BioExcel
 
     </p>
   </div>

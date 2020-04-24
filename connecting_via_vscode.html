@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Connecting via VS Code &mdash; cwl-virtual-training 0.1 documentation</title>
+  <title>Connecting via VS Code &mdash; CWL Virtual Training Setup 0.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Requesting a VM" href="requesting_vm.html" /> 
+    <link rel="prev" title="Congratulations" href="congratulations.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -49,7 +49,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> cwl-virtual-training
+            <a href="index.html" class="icon icon-home"> CWL Virtual Training Setup
           
 
           
@@ -85,16 +85,12 @@
 <li class="toctree-l1"><a class="reference internal" href="request_membership.html">Team Membership</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build_vm.html">Building the VM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="accessing_vm.html">Accessing the VM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Wait for the training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requesting_vm.html">Requesting a VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="congratulations.html">Congratulations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using VS Code:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Connecting via VS Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-ssh-extension">Installing SSH extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installing-an-ssh-client-on-windows-10">Installing an SSH client on Windows 10</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-ssh-extension">Installing SSH extension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuring-the-ssh-connection">Configuring the SSH Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#connecting-via-ssh">Connecting via SSH</a></li>
 </ul>
@@ -113,7 +109,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">cwl-virtual-training</a>
+          <a href="index.html">CWL Virtual Training Setup</a>
         
       </nav>
 
@@ -174,28 +170,46 @@
 <li>This should find lots of extensions, the top one should be <strong>Remote - SSH</strong> and under this it should say <strong>Microsoft</strong>.</li>
 <li>Click on the extension, and then click <strong>install</strong>. It may ask you to restart <strong>Visual Studio Code</strong></li>
 </ol>
-<div class="section" id="installing-an-ssh-client-on-windows-10">
-<h3>Installing an SSH client on Windows 10<a class="headerlink" href="#installing-an-ssh-client-on-windows-10" title="Permalink to this headline">¶</a></h3>
-<p>If you are on windows, and need an SSH clients, see this link:</p>
-<p><a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/</a></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you are using windows 10, you may not have an SSH client already.  You will need to install one so that you can connect to the VM.  There are great instructions for installing a client <a class="reference external" href="https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/">here</a>.</p>
 </div>
 </div>
 <div class="section" id="configuring-the-ssh-connection">
 <h2>Configuring the SSH Connection<a class="headerlink" href="#configuring-the-ssh-connection" title="Permalink to this headline">¶</a></h2>
-<p>Open visual studio code, and press the <strong>`F1`</strong> key to access the command palette.  Then click on <strong>Remote-SSH: Connect to Host…</strong>.  If you begin typing this, it should appear in the list.</p>
-<p>Once you have clicked on this, click on <cite>**Add New SSH Host…*</cite>, and then type</p>
+<p>Now that the SSH extension has been installed, we will need to configure it to connect to our VM.</p>
+<ol class="arabic">
+<li><p class="first">Open visual studio code, and press the <strong>`F1`</strong> key to access the command palette.</p>
+</li>
+<li><p class="first">Click on <strong>Remote-SSH: Connect to Host…</strong>.  If you begin typing this, it should appear in the list.</p>
+</li>
+<li><p class="first">Once you have clicked on this, click on <cite>**Add New SSH Host…*</cite>, and then type</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ubuntu@&lt;my_vms_ip&gt;
 </pre></div>
 </div>
-<p>You may be prompted to <strong>Select SSH configuration file to update</strong>.  If you are select <code class="docutils literal notranslate"><span class="pre">C:Users\&lt;Name&gt;\.ssh\config</span></code></p>
-<p>A pop up box should then appear in the bottom right with an option to <strong>Connect</strong>.  Click on <strong>Connect</strong>.  If the box does not appear follow the instructions for connecting to an existing SSH connection below.</p>
+</li>
+<li><p class="first">You may be prompted to <strong>Select SSH configuration file to update</strong>.  If so, select <code class="docutils literal notranslate"><span class="pre">C:Users\&lt;Name&gt;\.ssh\config</span></code></p>
+</li>
+<li><p class="first">A pop up box should then appear in the bottom right with an option to <strong>Connect</strong>.  Click on <strong>Connect</strong>.
+.. tip:: If the box does not appear follow the instructions for connecting to an existing SSH connection below.</p>
+</li>
+</ol>
 </div>
 <div class="section" id="connecting-via-ssh">
 <h2>Connecting via SSH<a class="headerlink" href="#connecting-via-ssh" title="Permalink to this headline">¶</a></h2>
-<p>To connect to this, press the <strong>`F1`</strong> key to access the command palette.  Then click on <strong>Remote-SSH: Connect to Host…</strong>.  You should then see the IP address of the machine you want to connect to in the list, click on it.</p>
-<p>This should open up a new window.  On <strong>Windows</strong> this should have a prompt at the top for you to enter your SSH passphrase. On Linux, your system should prompt for the passphrase.</p>
-<p>Once it has connected, this window of Visual Studio Code will have access to all the files on the remote machine.</p>
-<p>You will probably want access to the <strong>terminal</strong> for the tutorial.  To do this, click on <strong>Terminal</strong> at the top, and then click on <strong>New Terminal</strong>.</p>
+<p>Now that we have configured the SSH connection we will need to connect to it, you may have to do this eveverytime you open VS Code</p>
+<ol class="arabic simple">
+<li>Open VS Code</li>
+<li>Press the <strong>`F1`</strong> key to access the command palette.</li>
+<li>Then click on <strong>Remote-SSH: Connect to Host…</strong>.  You should then see the IP address of the machine you want to connect to in the list, click on it.</li>
+<li>This should open up a new window.  On <strong>Windows</strong> this should have a prompt at the top for you to enter your SSH passphrase. On Linux, your system should prompt for the passphrase.</li>
+<li>Once it has connected, this window of Visual Studio Code will have access to all the files on the remote machine.</li>
+</ol>
+<p>You will probably want access to the <strong>terminal</strong> for the tutorial.  To do this:</p>
+<ol class="arabic simple">
+<li>Click on <strong>Terminal</strong> at the top.</li>
+<li>Then click on <strong>New Terminal</strong>.</li>
+</ol>
 </div>
 </div>
 
@@ -208,7 +222,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="requesting_vm.html" class="btn btn-neutral float-left" title="Requesting a VM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="congratulations.html" class="btn btn-neutral float-left" title="Congratulations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -217,7 +231,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Robin Long
+        &copy; Copyright 2020, BioExcel
 
     </p>
   </div>

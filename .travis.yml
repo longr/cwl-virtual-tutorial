@@ -9,7 +9,10 @@ script:
   - make html
   # Tell GitHub not to use jekyll to compile the docs
   - touch _build/html/.nojekyll
-
+  - ls
+  - ls ..
+  - pwd
+  
 # Tell Travis CI to copy the documentation to the gh-pages branch of
 # your GitHub repository.
 deploy:

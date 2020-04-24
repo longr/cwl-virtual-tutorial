@@ -3,23 +3,24 @@ Team Membership
 =============================
 
 You need permissions to build a VM and in the BioExcel Cloud Portal a concept of *Teams* is used to grant permissions.
-In order to build a VM for CWL Training, you need to become a member of a team called: CWL Training. 
+In order to build a VM for CWL Training, you need to become a member of a team called: *CWL Training*. 
 
 Requesting team membership
 ===========================
 
-You will first need to register with Elixir AAI, this can be done by following the instructions `here <http://www.python.org/>`_.
+You will first need to `register with Elixir AAI
+<https://elixir-europe.org/register>`_.
 
 Once you have registered, you can check it was successful by logging onto the BioExcel Cloud Portal.
 
-1. Log in to BioExcel Portal as described in the previous chapter.
-2. Click your user name in the upper right corner and choose Profile from the drop-down menu.
-3. Click the Tab Teams. If you are a new user to BioExcel Cloud Portal, you should see no teams on the list.
+1. Log in to `BioExcel Portal <https://bioexcel.ebi.ac.uk/>`_ as described in the previous chapter.
+2. Click your user name in the upper right corner and choose **Profile** from the drop-down menu.
+3. Click the **Tab Teams**. If you are a new user to BioExcel Cloud Portal, you should see no teams on the list.
 
    .. image:: images/image2.png
       :width: 600
 	      
-4. In the field below Join Team, type: ‘CWL Training’ and click Request.
+4. In the field below *Join Team*, type: ``CWL Training`` and click **Request**.
 
 Checking team membership
 ========================
@@ -42,7 +43,7 @@ Checking team membership
 
       The CloudPortal Team.
 
-2. Ignore instructions in the email and instead log in to the BioExcel Portal again. This time, when you visit the Profile page (your name → Profile) you should see this in Configurations:
+2. **Ignore instructions in the email** (they go to a different portal) and instead log in to the `BioExcel Portal <https://bioexcel.ebi.ac.uk/>`_ https://bioexcel.ebi.ac.uk/ - this time, when you visit the **Profile** page (your name → Profile) you should see this in *Configurations*:
 
    .. image:: images/image3.png
       :width: 600

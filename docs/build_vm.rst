@@ -4,6 +4,20 @@ Building the VM
 
 Assuming you have followed the previous steps and checked that they worked, you should be ready to build the VM.
 
+Getting an SSH Key
+==================
+
+You will need an SSH Key to log in into your newly built VM. Good instructions of how to generate an SSH Key are provided by `Github <https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_.
+
+You do not need to add the key to your GitHub account! It is enough that it is on your machine. In the next step you will provide your public key, while building a VM.
+
+If you are on Windows you may not have an SSH client installed. Try one of these options:
+
+* `Enable SSH client in Windows 10 <https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/>`_
+
+* `Install Git for Windows (which includes SSH) <https://gitforwindows.org/>`_
+
+
 Creating a VM
 =============
 

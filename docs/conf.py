@@ -20,9 +20,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'cwl-virtual-training'
-copyright = u'2020, Robin Long'
-author = u'Robin Long'
+project = u'CWL Virtual Training Setup'
+copyright = u'2020, BioExcel'
+author = u'Felix Xavier Amaladoss, Adam Hospital, Marta Lloret Llinares, Robin Long, Ania Niewielska, Stian Soiland-Reyes'
 
 # The short X.Y version
 version = u''
@@ -84,6 +84,11 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
+
+#html_theme_options = {
+#    'logo_only': False
+#}
+#html_logo = "images/image8.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

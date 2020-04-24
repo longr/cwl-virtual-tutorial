@@ -16,7 +16,7 @@ Once you have registered, you can check it was successful by logging onto the Bi
 2. Click your user name in the upper right corner and choose Profile from the drop-down menu.
 3. Click the Tab Teams. If you are a new user to BioExcel Cloud Portal, you should see no teams on the list.
 
-   .. image:: images/image2.png
+   .. image:: images/image6.png
       :width: 600
 	      
 4. In the field below Join Team, type: ‘CWL Training’ and click Request.
@@ -54,6 +54,6 @@ Checking team membership
 	      
 3. Click on **Teams** and you should also see this:
 
-   .. image:: images/image6.png
+   .. image:: images/image2.png
       :width: 600
 	    

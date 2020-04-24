@@ -2,12 +2,14 @@
 Getting an Elixir Account
 =============================
 
-In order to log in to the BioExcel Cloud Portal you will need an account in Elixir AAI. Elixir AAI is a Single Sign On service for life science applications. You can set up your account in Elixir AAI and later log in via Elixir AAI using your institutional account (provided it is supported by Elixir) or your social or commercial account (Google, LinkedIn, ORCID).
+In order to log in to the BioExcel Cloud Portal you will need an account in Elixir AAI. `Elixir AAI
+<https://elixir-europe.org/services/compute/aai/>`_ is a Single Sign On service for life science applications. You can set up your account in Elixir AAI and later log in via Elixir AAI using your institutional account (provided it is supported by Elixir) or your social or commercial account (Google, LinkedIn, ORCID).
 
 Registering with Elixir AAI
 ===========================
 
-You will first need to register with Elixir AAI, this can be done by following the instructions `here <http://www.python.org/>`_.
+You will first need to `register with Elixir AAI
+<https://elixir-europe.org/register>`_.
 
 Once you have registered, you can check it was successful by logging onto the BioExcel Cloud Portal.
 

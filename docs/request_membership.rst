@@ -54,6 +54,6 @@ Checking team membership
 	      
 3. Click on **Teams** and you should also see this:
 
-   .. image:: images/image4.png
+   .. image:: images/image6.png
       :width: 600
 	    

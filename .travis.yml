@@ -4,6 +4,7 @@ install:
   - pip install sphinx sphinx-rtd-theme
 
 script:
+  - cd docs
   # Use Sphinx to make the html docs
   - make html
   # Tell GitHub not to use jekyll to compile the docs

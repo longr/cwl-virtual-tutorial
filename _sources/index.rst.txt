@@ -8,8 +8,9 @@ Welcome to CWL Virtual Training Setup
 
 We will be following the CWL tutorial using virtual machines provided by EBI.  Before we are able to do the tutorial, you will need to request and login to a VM. The instructions below will guide you though this.   The second set of instructions will guide you through setting up Visual Studio Code (a very good editor) to work with the VMs.  This is especially useful if you are on a non-unix machine as this will give you a great editor and an SSH connection to the VM. 
 
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Getting a VM:
 
    elixir_account.rst
@@ -19,7 +20,7 @@ We will be following the CWL tutorial using virtual machines provided by EBI.  B
    congratulations.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Using VS Code:
 
    connecting_via_vscode.rst
